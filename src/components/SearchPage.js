@@ -1,73 +1,64 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import BookItem from "./BookItem";
+import React, { useState, useEffect } from "react";
 import * as BooksAPI from "../BooksAPI";
+import GetBooks from "./GetBooks";
+import { Link } from "react-router-dom";
 
-class SearchPage extends Component {
-	state = {
-		books: [],
-		query: "",
-	};
+const SearchPage = ({ changeBookShelf, fetchedBooks }) => {
+	const [term, setTerm] = useState("");
+	const [debouncedTerm, setDebouncedTerm] = useState(term);
+	const [books, setBooks] = useState([]);
 
-	handleUpdateQuery(query) {
-		BooksAPI.search(query).then((books) =>
-			books ? this.setState({ books }) : []
-		);
-		this.setState({ query });
-	}
+	useEffect(() => {
+		const timerID = setTimeout(() => {
+			setDebouncedTerm(term);
+		}, 300);
 
-	handleBookShelf(book, shelf) {
-		BooksAPI.update(book, shelf)
-			.then(() =>
-				shelf !== "none"
-					? console.log(`${book.title} has been added to your library!`)
-					: null
-			)
-			.catch(() => alert("Oops! That was our fault somehow.."));
-	}
+		return () => {
+			clearTimeout(timerID);
+		};
+	}, [term]);
 
-	renderSearchResults() {
-		const { books, query } = this.state;
+	useEffect(() => {
+		const searchBooks = (term) => {
+			if (term.length !== 0) {
+				BooksAPI.search(term).then((books) => {
+					if (!books.error) {
+						setBooks(books);
+					} else {
+						setBooks([]);
+					}
+				});
+			} else {
+				setBooks([]);
+			}
+		};
+		searchBooks(term);
+	}, [term, debouncedTerm]);
 
-		if (query) {
-			return books.error ? (
-				<div>Nothing found</div>
-			) : (
-				books.map((book, index) => {
-					return (
-						<BookItem
-							key={index}
-							book={book}
-							handleBookShelf={this.handleBookShelf.bind(this)}
-						/>
-					);
-				})
-			);
-		}
-	}
-
-	render() {
-		return (
-			<div className='search-books'>
-				<div className='search-books-bar'>
-					<Link to='/' className='close-search'>
-						Close
-					</Link>
-					<div className='search-books-input-wrapper'>
-						<input
-							type='text'
-							placeholder='Search by title, author, or subject'
-							value={this.state.query}
-							onChange={(e) => this.handleUpdateQuery(e.target.value)}
-						/>
-					</div>
-				</div>
-				<div className='search-books-results'>
-					<ol className='books-grid'>{this.renderSearchResults()}</ol>
+	return (
+		<div className='search-books'>
+			<div className='search-books-bar'>
+				<Link to='/'>
+					<button className='close-search'>Close</button>
+				</Link>
+				<div className='search-books-input-wrapper'>
+					<input
+						type='text'
+						value={term}
+						onChange={(e) => setTerm(e.target.value)}
+						placeholder='Search by title or author'
+					/>
 				</div>
 			</div>
-		);
-	}
-}
+			<div className='search-books-results'>
+				<GetBooks
+					searchedBooks={books}
+					fetchedBooks={fetchedBooks}
+					changeBookShelf={changeBookShelf}
+				/>
+			</div>
+		</div>
+	);
+};
 
 export default SearchPage;

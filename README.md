@@ -8,7 +8,8 @@ Built with:
 
 ![Udacity](https://camo.githubusercontent.com/b3f849182e8fe65cf6efcfc36bc941e4af207ac7f08017a33c37ffbe9e2e0219/68747470733a2f2f696d672e736869656c64732e696f2f7374617469632f76313f7374796c653d666f722d7468652d6261646765266d6573736167653d5564616369747926636f6c6f723d323232323232266c6f676f3d55646163697479266c6f676f436f6c6f723d303242334534266c6162656c3d)
 
-This started as the React Fundamentals project for Udacity's Nanodegree. The goal of this template is to save you time by providing a static example of the CSS and HTML markup that may be used, but without any of the React code that is needed to complete the project. If you choose to start with this template, your job will be to add interactivity to the app by refactoring the static code in this template.
+This started as the React Fundamentals project for Udacity's Nanodegree. This is
+my implementation of the MyReads Book Lending site.
 
 Of course, you are free to start this project from scratch if you wish! Just be
 sure to use [Create React
@@ -27,24 +28,28 @@ To get started developing right away:
 ## 🤔What You're Getting
 
 ```bash
-├── CONTRIBUTING.md
-├── README.md - This file.
-├── SEARCH_TERMS.md # The whitelisted short collection of available search terms for you to use with your app.
-├── package.json # npm package manager file. It's unlikely that you'll need to modify this.
-├── public
-│   ├── favicon.ico # React Icon, You may change if you wish.
-│   └── index.html # DO NOT MODIFY
-└── src
-    ├── App.css # Styles for your app. Feel free to customize this as you desire.
-    ├── App.js # This is the root of your app. Contains static HTML right now.
-    ├── App.test.js # Used for testing. Provided with Create React App. Testing is encouraged, but not required.
-    ├── BooksAPI.js # A JavaScript API for the provided Udacity backend. Instructions for the methods are below.
-    ├── icons # Helpful images for your app. Use at your discretion.
-    │   ├── add.svg
-    │   ├── arrow-back.svg
-    │   └── arrow-drop-down.svg
-    ├── index.css # Global styles. You probably won't need to change anything here.
-    └── index.js # You should not need to modify this file. It is used for DOM rendering only.
+├─ node_modules/
+├─ public/
+│  ├─ favicon.ico
+│  ├─ index.html
+├─ src/
+│  ├─ components/
+│  │  ├─ SearchPage.js
+│  │  ├─ BooksList.js
+│  │  ├─ BookItem.js
+│  ├─ icons/
+│  ├── add.svg
+│  ├── arrow-back.svg
+│  └── arrow-drop-down.svg
+│  ├─ index.css
+│  ├─ App.js # This is the root of your app. Contains static HTML right now.
+│  ├─ BooksAPI.js  # A JavaScript API for the provided Udacity backend. Instructions for the methods are below.
+│  ├─ App.css
+│  ├─ index.js # This file is used for DOM rendering only.
+├─ .gitignore
+├─ package.json  # npm package manager file.
+├─ README.md # This file.
+
 ```
 
 Remember that good React design practice is to create new JS files for each component and use import/require statements to include them where they are needed.
