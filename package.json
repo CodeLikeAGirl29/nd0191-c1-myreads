@@ -23,5 +23,8 @@
         "not dead",
         "not ie <= 11",
         "not op_mini all"
-    ]
+    ],
+    "devDependencies": {
+        "markdown-notes-tree": "^1.12.0"
+    }
 }

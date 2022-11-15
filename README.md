@@ -34,28 +34,29 @@ To get started developing right away:
 ## 🤔What You're Getting
 
 ```bash
-├─ node_modules/
-├─ public/
-│  ├─ favicon.ico
-│  ├─ index.html
-├─ src/
-│  ├─ components/
-│  │  ├─ SearchPage.js
-│  │  ├─ BooksList.js
-│  │  ├─ BookItem.js
-│  ├─ icons/
-│  ├── add.svg
-│  ├── arrow-back.svg
-│  └── arrow-drop-down.svg
-│  ├─ index.css
-│  ├─ App.js # This is the root of your app. Contains static HTML right now.
-│  ├─ BooksAPI.js  # A JavaScript API for the provided Udacity backend. Instructions for the methods are below.
-│  ├─ App.css
-│  ├─ index.js # This file is used for DOM rendering only.
-├─ .gitignore
-├─ package.json  # npm package manager file.
-├─ README.md # This file.
-
+├── CONTRIBUTING.md
+├── README.md - This file.
+├── SEARCH_TERMS.md # The whitelisted short collection of available search terms for you to use with your app.
+├── package.json # npm package manager file. It's unlikely that you'll need to modify this.
+├── .gitignore
+├── node_modules/
+├── public/
+│   ├── ├─ favicon.ico
+│   └── └─ index.html
+└── src/
+    ├── components/
+    │   ├── SearchPage.js
+    │   ├── BooksList.js
+    │   └── BookItem.js
+    ├── icons/
+    │   ├── add.svg
+    │   ├── arrow-back.svg
+    │   └── arrow-drop-down.svg
+    ├── index.css
+    ├── App.js # This is the root of your app. Contains static HTML right now.
+    ├── BooksAPI.js # A JavaScript API for the provided Udacity backend.
+    ├── App.css
+    └── index.js # Used for DOM rendering only
 ```
 
 Remember that good React design practice is to create new JS files for each component and use import/require statements to include them where they are needed.
