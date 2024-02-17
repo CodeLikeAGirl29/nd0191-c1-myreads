@@ -4,11 +4,11 @@ Link to demo site can be found [here](https://myreads-react.vercel.app/).
 
 Built with:
 
-![React](https://camo.githubusercontent.com/67a01fa7cf337616274f39c070a11638f2e65720e414ef55b8dd3f9c2a803b2a/68747470733a2f2f696d672e736869656c64732e696f2f7374617469632f76313f7374796c653d666f722d7468652d6261646765266d6573736167653d526561637426636f6c6f723d323232323232266c6f676f3d5265616374266c6f676f436f6c6f723d363144414642266c6162656c3d)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 
-![React Router](https://camo.githubusercontent.com/a5f1968a99631284ca552953929cff7b6abb375853bb0944fae0dc520c45c73b/68747470733a2f2f696d672e736869656c64732e696f2f7374617469632f76313f7374796c653d666f722d7468652d6261646765266d6573736167653d52656163742b526f7574657226636f6c6f723d434134323435266c6f676f3d52656163742b526f75746572266c6f676f436f6c6f723d464646464646266c6162656c3d)
+![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
 
-![Udacity](https://camo.githubusercontent.com/b3f849182e8fe65cf6efcfc36bc941e4af207ac7f08017a33c37ffbe9e2e0219/68747470733a2f2f696d672e736869656c64732e696f2f7374617469632f76313f7374796c653d666f722d7468652d6261646765266d6573736167653d5564616369747926636f6c6f723d323232323232266c6f676f3d55646163697479266c6f676f436f6c6f723d303242334534266c6162656c3d)
+![Udacity](https://img.shields.io/badge/Udacity-grey?style=for-the-badge&logo=udacity&logoColor=15B8E6)
 
 This started as the React Fundamentals project for Udacity's Nanodegree. This is
 my implementation of the MyReads Book Lending site.
@@ -20,7 +20,7 @@ project.
 
 ---
 
-![](https://res.cloudinary.com/codelikeagirl29/image/upload/v1660503064/MyReads_swf3hd.png)
+![](https://res.cloudinary.com/codelikeagirl29/image/upload/v1708174712/MyReads_dmw8lx.png)
 
 ---
 
@@ -28,7 +28,7 @@ project.
 
 To get started developing right away:
 
-- install all project dependencies with `npm install`
+- install all project dependencis with `npm install`
 - start the development server with `npm start`
 
 ## 🤔What You're Getting
